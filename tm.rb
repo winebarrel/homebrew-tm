@@ -5,21 +5,21 @@
 class Tm < Formula
   desc "Time Calculator."
   homepage "https://github.com/winebarrel/tm"
-  version "1.1.1"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/tm/releases/download/v1.1.1/tm_1.1.1_darwin_arm64.tar.gz"
-      sha256 "9e01b34e9417fe60433ab62a500b4fe55fae3f83474a7265e62eee6e77091a06"
+      url "https://github.com/winebarrel/tm/releases/download/v1.2.0/tm_1.2.0_darwin_arm64.tar.gz"
+      sha256 "0a6d4eab3a5abe670e66ba0aea9dbf16eb1d581c1a5673740cffc8aea305e945"
 
       def install
         bin.install 'tm'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/tm/releases/download/v1.1.1/tm_1.1.1_darwin_amd64.tar.gz"
-      sha256 "b7dbfc7b3a1e7e84d849c44be1df8eaa6087131ff9a5f065dcca1bbcb1a0c94e"
+      url "https://github.com/winebarrel/tm/releases/download/v1.2.0/tm_1.2.0_darwin_amd64.tar.gz"
+      sha256 "67f6af748c3147b48167bfd790219961cee87cbd4aad847c7d33cb0019dfe28d"
 
       def install
         bin.install 'tm'
@@ -29,16 +29,16 @@ class Tm < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/tm/releases/download/v1.1.1/tm_1.1.1_linux_arm64.tar.gz"
-      sha256 "d0ec59878a3c4e8b75c6f2523da7ff1307a1fb8cb1fe2527bfe9b7c0dea55970"
+      url "https://github.com/winebarrel/tm/releases/download/v1.2.0/tm_1.2.0_linux_arm64.tar.gz"
+      sha256 "0a9837e4ed795b2ef54bc40223ddb6f436922b61d7d103fcf848c178211a5d4f"
 
       def install
         bin.install 'tm'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/tm/releases/download/v1.1.1/tm_1.1.1_linux_amd64.tar.gz"
-      sha256 "c3dd97c49782a5a705554cf79077f1b7b67d27a46f995742c4f7573486b13090"
+      url "https://github.com/winebarrel/tm/releases/download/v1.2.0/tm_1.2.0_linux_amd64.tar.gz"
+      sha256 "43b9a60a4fafa38999c1da293eeee05f1b24c9fde76ab32981157bebee3fbaa4"
 
       def install
         bin.install 'tm'
