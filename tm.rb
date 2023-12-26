@@ -5,21 +5,21 @@
 class Tm < Formula
   desc "Time Calculator."
   homepage "https://github.com/winebarrel/tm"
-  version "1.3.0"
+  version "1.3.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/tm/releases/download/v1.3.0/tm_1.3.0_darwin_arm64.tar.gz"
-      sha256 "56060bfdf036ab7f4a5a801c8bec8a6101917601ca86900c3679cd6bfbce25f5"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/tm/releases/download/v1.3.1/tm_1.3.1_darwin_amd64.tar.gz"
+      sha256 "53a5842b581d7190425bbe2b8fcc1fbbd5c068fb2faf1f8bf3b470f305792d26"
 
       def install
         bin.install 'tm'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/tm/releases/download/v1.3.0/tm_1.3.0_darwin_amd64.tar.gz"
-      sha256 "4f4e366ab3d99f211d824b5bcb3a659f8bce9188ef39b826fc6655520d50c6df"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/tm/releases/download/v1.3.1/tm_1.3.1_darwin_arm64.tar.gz"
+      sha256 "676775f9583259883afebecfbe9cb6ba3acb15a476a76804dbe7d054f97bdba3"
 
       def install
         bin.install 'tm'
@@ -28,17 +28,17 @@ class Tm < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/tm/releases/download/v1.3.0/tm_1.3.0_linux_arm64.tar.gz"
-      sha256 "376fad84e1318bdd4307f3ea0a640846ea9eddf2606d6bacfcf1dc070c4ae345"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/tm/releases/download/v1.3.1/tm_1.3.1_linux_amd64.tar.gz"
+      sha256 "258321d42d7b9f7cfdddf9095d9e2deb6c75ee11ac5b5067e2490865044919b7"
 
       def install
         bin.install 'tm'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/tm/releases/download/v1.3.0/tm_1.3.0_linux_amd64.tar.gz"
-      sha256 "1793238dd12519ffe9aef0112f3c6fa9a6520d5e59575cf5780eb0875b68ac85"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/tm/releases/download/v1.3.1/tm_1.3.1_linux_arm64.tar.gz"
+      sha256 "fae9c0003a279c3d0bc821c1b37ed2788f174c727230600b28d86152363c2c0f"
 
       def install
         bin.install 'tm'
