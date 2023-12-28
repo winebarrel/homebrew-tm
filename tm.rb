@@ -5,21 +5,21 @@
 class Tm < Formula
   desc "Time Calculator."
   homepage "https://github.com/winebarrel/tm"
-  version "1.3.1"
+  version "1.3.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/tm/releases/download/v1.3.1/tm_1.3.1_darwin_amd64.tar.gz"
-      sha256 "53a5842b581d7190425bbe2b8fcc1fbbd5c068fb2faf1f8bf3b470f305792d26"
+      url "https://github.com/winebarrel/tm/releases/download/v1.3.2/tm_1.3.2_darwin_amd64.tar.gz"
+      sha256 "ccdfd77670b69391fbd18f6904ac4f6e8fd72e07a80caebdef1b76fbc8c7466f"
 
       def install
         bin.install 'tm'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/tm/releases/download/v1.3.1/tm_1.3.1_darwin_arm64.tar.gz"
-      sha256 "676775f9583259883afebecfbe9cb6ba3acb15a476a76804dbe7d054f97bdba3"
+      url "https://github.com/winebarrel/tm/releases/download/v1.3.2/tm_1.3.2_darwin_arm64.tar.gz"
+      sha256 "876bae7f10115e82270799f156ba06575fbdd60f4127f956944f1c3634e8ba6a"
 
       def install
         bin.install 'tm'
@@ -28,17 +28,17 @@ class Tm < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/tm/releases/download/v1.3.1/tm_1.3.1_linux_amd64.tar.gz"
-      sha256 "258321d42d7b9f7cfdddf9095d9e2deb6c75ee11ac5b5067e2490865044919b7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/tm/releases/download/v1.3.2/tm_1.3.2_linux_arm64.tar.gz"
+      sha256 "d2423723fdb19ef0d60d6b518e6650452079b807bb78676a9d6e8b66b251305d"
 
       def install
         bin.install 'tm'
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/tm/releases/download/v1.3.1/tm_1.3.1_linux_arm64.tar.gz"
-      sha256 "fae9c0003a279c3d0bc821c1b37ed2788f174c727230600b28d86152363c2c0f"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/tm/releases/download/v1.3.2/tm_1.3.2_linux_amd64.tar.gz"
+      sha256 "0d526ca7f8ff41867e497ca331e493de545c4165b89745ba416dd8792b7397c7"
 
       def install
         bin.install 'tm'
