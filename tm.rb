@@ -5,21 +5,21 @@
 class Tm < Formula
   desc "Time Calculator."
   homepage "https://github.com/winebarrel/tm"
-  version "1.3.2"
+  version "1.4.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/tm/releases/download/v1.3.2/tm_1.3.2_darwin_amd64.tar.gz"
-      sha256 "ccdfd77670b69391fbd18f6904ac4f6e8fd72e07a80caebdef1b76fbc8c7466f"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/tm/releases/download/v1.4.0/tm_1.4.0_darwin_arm64.tar.gz"
+      sha256 "3d8cee1a6e915a7ee0b66b2ef179b5c690f36ab294cffaaf3fb9f7a56e879656"
 
       def install
         bin.install 'tm'
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/tm/releases/download/v1.3.2/tm_1.3.2_darwin_arm64.tar.gz"
-      sha256 "876bae7f10115e82270799f156ba06575fbdd60f4127f956944f1c3634e8ba6a"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/tm/releases/download/v1.4.0/tm_1.4.0_darwin_amd64.tar.gz"
+      sha256 "777a8df959dd0f7efa90fcbbabac1d2c0ab833a8e7c28942a6f959d7725095be"
 
       def install
         bin.install 'tm'
@@ -29,16 +29,16 @@ class Tm < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/tm/releases/download/v1.3.2/tm_1.3.2_linux_arm64.tar.gz"
-      sha256 "d2423723fdb19ef0d60d6b518e6650452079b807bb78676a9d6e8b66b251305d"
+      url "https://github.com/winebarrel/tm/releases/download/v1.4.0/tm_1.4.0_linux_arm64.tar.gz"
+      sha256 "c7ffbe843d527a0695f438ed5f10f0e98dcbe5154a735b1d8ea80abbb355e9b0"
 
       def install
         bin.install 'tm'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/tm/releases/download/v1.3.2/tm_1.3.2_linux_amd64.tar.gz"
-      sha256 "0d526ca7f8ff41867e497ca331e493de545c4165b89745ba416dd8792b7397c7"
+      url "https://github.com/winebarrel/tm/releases/download/v1.4.0/tm_1.4.0_linux_amd64.tar.gz"
+      sha256 "c09c900866e8ff2c440a9e9d32845fd95c898b5f4ccdf875da8c4d96b29860e3"
 
       def install
         bin.install 'tm'
